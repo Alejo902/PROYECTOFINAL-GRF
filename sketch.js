@@ -44,7 +44,7 @@ function setup() {
 function draw() {
   background(220);
 
-  ellipse(50,50,50,50);
+  ellipse(50,50,250,250);
 
 
   image(tronco,20,20);
