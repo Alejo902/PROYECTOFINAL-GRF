@@ -50,6 +50,8 @@ function setup() {
     let x = (i*76)+40;
     let y = 40;
     vida.push(new Vidas(x,y));
+
+    
   }
 }
 
@@ -64,7 +66,7 @@ switch (1) {
   case 0:
     
     enemigo.mostrarRaton();
-    
+
 
   
       break;
