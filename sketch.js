@@ -64,6 +64,7 @@ switch (1) {
   case 0:
     
     enemigo.mostrarRaton();
+    
 
   
       break;
