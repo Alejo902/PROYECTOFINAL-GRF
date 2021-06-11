@@ -1,6 +1,14 @@
-let bill, cinta, fuegoazul, fuegorosa, gnomo, portal, rosa, tienda, tiostan,
-  winner, raton, pag_grande, muercie, mabel, hacha, gameO, dipper, diario_gran, alfombra, abuela, corazon,
-  abuelo, cuarto, escogerP, hombreTauro, bosque, paginas, inicial, tronco;
+let bill, cinta, fuegoazul, fuegorosa, gnomo, portal, rosa, tienda, tiostan, 
+winner, raton, pag_grande, muercie, mabel, hacha, gameO, dipper, diario_gran, alfombra,abuela,corazon,
+abuelo,cuarto,escogerP,hombreTauro,bosque,paginas,inicial,tronco;
+
+let enemigo = new Enemigos;
+let arma = new ArmasE;
+
+let vida = [];
+
+
+
 
 let arregloA = [];
 let arregloB1 = [new Array(26)];
@@ -44,87 +52,67 @@ function preload() {
 
 }
 function setup() {
-  createCanvas(998, 500);
+  createCanvas(1000, 500);
 
-  for (let i = 0; i < 26; i++) {
-    mapa.push(new Array(26));
-    for (let j = 0; j < 52; j++) {
-      mapa.push(new Array(52));
-    }
-  }
+  for (let i = 0; i < 4; i++) {
+    let x = (i*76)+40;
+    let y = 40;
+    vida.push(new Vidas(x,y));
 
-  for (let fil = 0; fil < 26; fil++) {
-    for (let col = 0; col < 52; col++) {
-      mapa[fil][col] = 0;
-    }
-
-    console.log(mapa)
+    
   }
 }
-
 
 function draw() {
-  background(220);
 
-  for (let fil = 0; fil < 26; fil++) {
-    for (let col = 0; col < 52; col++) {
-      if (mapa[fil][col] === 0) {
-        fill(255);
-      } else if (mapa[fil][col] === 1) {
-        fill(0);
-      }
-      stroke(0);
-      rect(col * 22, fil * 22, 22, 22);
-    }
+  for (let i = 0; i < vida.length; i++) {
+     
+    vida[i].mostrar();
   }
+  
+switch (1) {
+  case 0:
+    
+    enemigo.mostrarRaton();
 
-  switch (pantalla) {
-    case (0):
-      image(inicial, 0, 0);
-      break;
-    case (1):
-      image(escogerP, 0, 0);
-      stroke(100);
-      fill(255);
-      textSize(15);
-      text("CON UN CLICK", 438, 142)
-      break;
-    case (2):
-      image(cuarto, 0, 0);
-      break;
-    case (3):
-      image(pag_grande, 0, 0);
-      break;
-    case (4):
-      image(diario_gran, 0, 0);
-      break;
-    case (5):
-      image(tienda, 0, 0);
-      break;
-    case (6):
-      image(bosque, 0, 0);
-      break;
-    case (7):
-      image(portal, 0, 0);
-      break;
-    case (8):
-      image(gameO, 0, 0);
-      break;
-    case (9):
-      image(winner, 0, 0);
-      break;
-  }
 
+  
+      break;
+
+
+  case 1:
+    enemigo.mostrarMurcie();
+      break;
+
+  case 2:
+      this.x+=5;
+      break;
+
+  case 3:
+      this.x+=5;
+      break;
+
+  case 4:
+      this.y-=5;
+      break;
+
+  case 5:
+      this.y-=5;
+      break;
+
+  case 6:
+      this.y+=5;
+      break;
+
+  case 7:
+      this.y+=5;
+      break;
+}
 }
 
-function mouseClicked() {
-  if (mouseX > 402 && mouseX < 402 + 176 && mouseY > 440 && mouseY < 440 + 39) {
-    if (pantalla === 0) {
-      presionado = !presionado;
-      pantalla += 1;
-    }
+function validarTeclas() {
+  if (keyIsDown(97) || keyIsDown (65)) {
+     
+  
   }
- 
-
-  console.log(mouseX, mouseY);
 }
