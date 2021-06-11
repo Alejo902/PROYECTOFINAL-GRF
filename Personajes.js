@@ -51,7 +51,7 @@ class Personajes(){
 
     }
 
-    
+    again(){}
 
 
 
