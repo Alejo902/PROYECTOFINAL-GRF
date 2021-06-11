@@ -1,7 +1,7 @@
 let bill, cinta, fuegoazul, fuegorosa, gnomo, portal, rosa, tienda, tiostan, 
 winner, raton, pag_grande, muercie, mabel, hacha, gameO, dipper, diario_gran, alfombra,abuela,corazon,
 abuelo,cuarto,escogerP,hombreTauro,bosque,paginas,inicial,tronco;
-
+ let 
 function preload(){
 bill=loadImage("/assets/0bill0.png");
 cinta=loadImage("/assets/0cinta0.png");
@@ -47,7 +47,7 @@ function draw() {
   ellipse(50,50,250,250);
 
 
-  image(tronco,20,20);
+  image(tiostan,xper,20);
   
 
 
