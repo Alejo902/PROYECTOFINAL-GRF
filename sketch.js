@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-let bill, cinta, fuegoazul, fuegorosa, gnomo, portal, rosa, tienda, tiostan,
-  winner, raton, pag_grande, muercie, mabel, hacha, gameO, dipper, diario_gran, alfombra, abuela, corazon,
-  abuelo, cuarto, escogerP, hombreTauro, bosque, paginas, inicial, tronco;
-=======
 let bill, cinta, fuegoazul, fuegorosa, gnomo, portal, rosa, tienda, tiostan, 
 winner, raton, pag_grande, muercie, mabel, hacha, gameO, dipper, diario_gran, alfombra,abuela,corazon,
 abuelo,cuarto,escogerP,hombreTauro,bosque,paginas,inicial,tronco;
@@ -44,7 +39,6 @@ paginas=loadImage("/assets/PaginasDelLibro-8.png");
 inicial=loadImage("/assets/Pantalla inicial-8.png");
 tronco=loadImage("/assets/Tronco.png");
 maya=loadImage("/assets/maya-8.png");
->>>>>>> 38f9aa8e295263e261d64af954e816a8789f460d
 
 let arregloA = [];
 let arregloB1 = [new Array(26)];
@@ -88,27 +82,7 @@ function preload() {
 
 }
 function setup() {
-<<<<<<< HEAD
-  createCanvas(998, 500);
-
-  for (let i = 0; i < 26; i++) {
-    mapa.push(new Array(26));
-    for (let j = 0; j < 52; j++) {
-      mapa.push(new Array(52));
-    }
-  }
-
-  for (let fil = 0; fil < 26; fil++) {
-    for (let col = 0; col < 52; col++) {
-      mapa[fil][col] = 0;
-    }
-
-    console.log(mapa)
-  }
-}
-=======
   createCanvas(1000, 500);
->>>>>>> 38f9aa8e295263e261d64af954e816a8789f460d
 
   for (let i = 0; i < 4; i++) {
     let x = (i*76)+40;
@@ -121,69 +95,6 @@ function setup() {
 
 function draw() {
 
-<<<<<<< HEAD
-  for (let fil = 0; fil < 26; fil++) {
-    for (let col = 0; col < 52; col++) {
-      if (mapa[fil][col] === 0) {
-        fill(255);
-      } else if (mapa[fil][col] === 1) {
-        fill(0);
-      }
-      stroke(0);
-      rect(col * 22, fil * 22, 22, 22);
-    }
-  }
-
-  switch (pantalla) {
-    case (0):
-      image(inicial, 0, 0);
-      break;
-    case (1):
-      image(escogerP, 0, 0);
-      stroke(100);
-      fill(255);
-      textSize(15);
-      text("CON UN CLICK", 438, 142)
-      break;
-    case (2):
-      image(cuarto, 0, 0);
-      break;
-    case (3):
-      image(pag_grande, 0, 0);
-      break;
-    case (4):
-      image(diario_gran, 0, 0);
-      break;
-    case (5):
-      image(tienda, 0, 0);
-      break;
-    case (6):
-      image(bosque, 0, 0);
-      break;
-    case (7):
-      image(portal, 0, 0);
-      break;
-    case (8):
-      image(gameO, 0, 0);
-      break;
-    case (9):
-      image(winner, 0, 0);
-      break;
-  }
-
-}
-
-function mouseClicked() {
-  if (mouseX > 402 && mouseX < 402 + 176 && mouseY > 440 && mouseY < 440 + 39) {
-    if (pantalla === 0) {
-      presionado = !presionado;
-      pantalla += 1;
-    }
-  }
- 
-
-  console.log(mouseX, mouseY);
-=======
   for (let i = 0; i < vida.length; i++) {
      
     vida[i].mostrar();
@@ -234,5 +145,5 @@ function validarTeclas() {
      
   
   }
->>>>>>> 38f9aa8e295263e261d64af954e816a8789f460d
+}
 }
