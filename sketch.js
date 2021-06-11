@@ -9,6 +9,7 @@ let arregloB2 = [new Array(52)];
 let mapa = [];
 
 let pantalla = 0;
+let presionado = false;
 
 function preload() {
   bill = loadImage("/assets/0bill0.png");
@@ -86,7 +87,7 @@ function draw() {
       stroke(100);
       fill(255);
       textSize(15);
-      text("CON UN CLICK",438, 142)
+      text("CON UN CLICK", 438, 142)
       break;
     case (2):
       image(cuarto, 0, 0);
@@ -113,18 +114,17 @@ function draw() {
       image(winner, 0, 0);
       break;
   }
- 
+
 }
 
-function mouseClicked(){
-if(mouseX>402 && mouseX<402+176 && mouseY>440 && mouseY<440+39){
-  if(pantalla===0){
-    pantalla=1;
-  }}
-  if(mouseX>381 && mouseX<381+176 && mouseY>440 && mouseY<440+39){
-    if(pantalla===1){
-      pantalla=2;
-    }}
+function mouseClicked() {
+  if (mouseX > 402 && mouseX < 402 + 176 && mouseY > 440 && mouseY < 440 + 39) {
+    if (pantalla === 0) {
+      presionado = !presionado;
+      pantalla += 1;
+    }
+  }
+ 
 
- console.log(mouseX,mouseY);
+  console.log(mouseX, mouseY);
 }
